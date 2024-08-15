@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace SalvaTerol\FormTorchlight\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FormTorchlightCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'form-torchlight';
 
     public $description = 'My command';
 

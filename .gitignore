@@ -2,12 +2,16 @@
 .idea
 .phpunit.result.cache
 .vscode
+.github
+.editorconfig
+.gitattributes
 build
 composer.lock
 coverage
 docs
 node_modules
 phpunit.xml
+phpunit.xml.dist
 phpstan.neon
 testbench.yaml
 vendor

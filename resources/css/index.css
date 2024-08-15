@@ -1,1 +1,29 @@
 @import '../../vendor/filament/filament/resources/css/theme.css';
+
+@tailwind utilities;
+
+/*
+ Add some vertical padding and expand the width
+ to fill its container. The horizontal padding
+ comes at the line level so that background
+ colors extend edge to edge.
+*/
+pre code.torchlight {
+    @apply block py-4 min-w-max rounded shadow-xl overflow-x-auto;
+}
+
+/*
+ Horizontal line padding.
+*/
+pre code.torchlight .line {
+    @apply px-4;
+}
+
+/*
+ Push the code away from the line numbers and
+ summary caret indicators.
+*/
+pre code.torchlight .line-number,
+pre code.torchlight .summary-caret {
+    @apply mr-4;
+}
