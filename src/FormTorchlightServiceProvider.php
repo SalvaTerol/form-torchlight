@@ -29,8 +29,8 @@ class FormTorchlightServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package->name(static::$name)->hasCommands($this->getCommands())->hasInstallCommand(function (InstallCommand $command) {
-                $command->publishConfigFile()->publishMigrations()->askToRunMigrations()->askToStarRepoOnGitHub('salvaterol/form-torchlight');
-            });
+            $command->publishConfigFile()->publishMigrations()->askToRunMigrations()->askToStarRepoOnGitHub('salvaterol/form-torchlight');
+        });
 
         $configFileName = $package->shortName();
 
@@ -70,9 +70,7 @@ class FormTorchlightServiceProvider extends PackageServiceProvider
         ];
     }
 
-    public function packageRegistered(): void
-    {
-    }
+    public function packageRegistered(): void {}
 
     public function packageBooted(): void
     {
@@ -86,7 +84,7 @@ class FormTorchlightServiceProvider extends PackageServiceProvider
 
         // Handle Stubs
         if (app()->runningInConsole()) {
-            foreach (app(Filesystem::class)->files(__DIR__.'/../stubs/') as $file) {
+            foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
                 $this->publishes([
                     $file->getRealPath() => base_path("stubs/form-torchlight/{$file->getFilename()}"),
                 ], 'form-torchlight-stubs');
@@ -104,8 +102,8 @@ class FormTorchlightServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('form-torchlight', __DIR__ . '/../resources/dist/components/form-torchlight.js'),
-            Css::make('form-torchlight-styles', __DIR__.'/../resources/dist/form-torchlight.css'),
-            Js::make('form-torchlight-scripts', __DIR__.'/../resources/dist/form-torchlight.js'),
+            Css::make('form-torchlight-styles', __DIR__ . '/../resources/dist/form-torchlight.css'),
+            Js::make('form-torchlight-scripts', __DIR__ . '/../resources/dist/form-torchlight.js'),
         ];
     }
 
